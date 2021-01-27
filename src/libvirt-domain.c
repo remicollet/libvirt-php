@@ -2000,7 +2000,7 @@ PHP_FUNCTION(libvirt_domain_interface_addresses)
     GET_DOMAIN_FROM_ARGS("rl", &zdomain, &source);
 
     if ((count = virDomainInterfaceAddresses(domain->domain, &ifaces, source, 0)) < 0) {
-        RETURN_FALSE
+        RETURN_FALSE;
         goto cleanup;
     }
 
